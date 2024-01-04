@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 x:Class="MAUIIsEnabled.DisabledPage"
+			 Title="DisabledPage">
+
+	<Grid>
+
+		<CollectionView IsEnabled="False"
+						SelectionMode="Single"
+						ItemsSource="{Binding Items}">
+			
+			<CollectionView.ItemTemplate>
+				<DataTemplate>
+					<Label Margin="10"
+						   Padding="10"
+						   VerticalTextAlignment="Center"
+						   HorizontalTextAlignment="Start"
+						   TextColor="{AppThemeBinding Dark=White, Light=Black}"
+						   Text="{Binding Name}" />
+				</DataTemplate>
+			</CollectionView.ItemTemplate>
+			
+		</CollectionView>
+
+	</Grid>
+
+</ContentPage>
